@@ -31,16 +31,12 @@ int main()
 		printf("\nIngrese una opcion:\n\n");
 		printf("1- Ingresar 1er operando (A= %d)\n", A);
 		printf("2- Ingresar 2do operando (B= %d)\n", B);
-		printf("3- Calcular la suma (A+B)\n");
-		printf("4- Calcular la resta (A-B)\n");
-		printf("5- Calcular la multiplicacion (A*B)\n");
-		printf("6- Calcular la division (A/B)\n");
-		printf("7- Calcular el factorial (A!)\n");
-		printf("8- Calcular todas las operacione\n");
-		printf("9- Salir\n");
+		printf("3- Calcular todas las operaciones\n");
+		printf("4- Mostrar Resultados\n");
+		printf("5- Salir\n");
 
 		scanf("%d", &opcion);
-		while (opcion < 1 || opcion > 9) {
+		while (opcion < 1 || opcion > 5) {
 			printf("ERROR,reingrese una opcion valida");
 			scanf("%d", &opcion);
 		}
@@ -57,39 +53,26 @@ int main()
 			break;
 		case 3:
 			system("cls");
+			printf("Se han realizado las operaciones, pulse 4 para mostrar los resultados\n");
 			sumar(A, B, &resultadoSumar);
-			printf("Resultado de la suma es: %f\n",resultadoSumar);
-			break;
-		case 4:
-			system("cls");
 			restar(A, B, &resultadoRestar);
-			printf("Resultado de la resta es: %f\n",resultadoRestar);
-			break;
-		case 5:
-			system("cls");
 			multiplicar(A, B, &resultadoMultiplicar);
-			printf("Resultado de la multiplicacion es: %f\n",resultadoMultiplicar);
-			break;
-		case 6:
-			system("cls");
 			dividir(A, B, &resultadoDividir);
-			printf("Resultado de la division es: %.2f\n",resultadoDividir);
+			factorial(A);
+			factorial(B);
 			break;
-		case 7:
-			system("cls");
-			printf("E factorial de A es %d", factorial(A));
-			break;
-		case 8:
+
+		case 4:
 			system("cls");
 			printf("A=%d\nB=%d\n", A, B);
 			printf("Resultado de la suma es: %f\n", resultadoSumar);
 			printf("Resultado de la resta es: %f\n", resultadoRestar);
 			printf("Resultado de la multiplicacion es: %f\n",resultadoMultiplicar);
-			printf("Resultado de la division es: %.2f\n", resultadoMultiplicar);
-			printf("El factorial de A es %d", factorial(A));
-			printf("El factorial de B es %d", factorial(B));
+			printf("Resultado de la division es: %.2f\n", resultadoDividir);
+			printf("El factorial de A es %d \n", factorial(A));
+			printf("El factorial de B es %d \n", factorial(B));
 			break;
-		case 9:
+		case 5:
 			system("cls");
 			seguir = 'n';
 			break;
