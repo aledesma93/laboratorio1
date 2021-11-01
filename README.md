@@ -1,2 +1,2 @@
 # laboratorio1
-se entregarn tps de labo1
+se entregaran tps de labo1
