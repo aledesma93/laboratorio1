@@ -2,7 +2,7 @@
  * editorial.h
  *
  *  Created on: 20 nov. 2021
- *      Author: Ludo
+ *      Author: aledesma
  */
 
 #ifndef EDITORIAL_H_

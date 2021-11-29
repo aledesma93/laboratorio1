@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : SegundoParcialLabo.c
- Author      : Ludmila
+ Author      : aledesma
  Version     :
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
@@ -58,12 +58,7 @@ int main(void)
 				system("pause");
 				break;
 
-			case 6:
-				 controller_aplicarDescuentos(listaLibros, listaEditorial);
-				 break;
-			case 7:
-				 controller_guardarMapeado("mapeado.csv", listaLibros, listaEditorial);
-				break;
+
 			case 8:
 				printf("Confirma salida s/n: \n");
 				fflush(stdin);

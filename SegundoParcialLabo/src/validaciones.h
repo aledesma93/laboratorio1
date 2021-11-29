@@ -2,7 +2,7 @@
  * validaciones.h
  *
  *  Created on: 13 oct. 2021
- *      Author: Ludo
+ *      Author: aledesma
  */
 
 #ifndef VALIDACIONES_H_

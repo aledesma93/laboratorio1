@@ -1,4 +1,4 @@
-//LUDMILA
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,7 +34,7 @@ int controller_LibroLoadFromText(char* path , LinkedList* pArrayList)
 		}
 		printf("no es nulo \n");
 	}
-	printf("\n%d",ll_len(pArrayList));
+	printf("\nla lista mide: %d",ll_len(pArrayList));
     return retorno;
 }
 
@@ -55,7 +55,7 @@ int controller_EditorialLoadFromText(char* path , LinkedList* pArrayList)
 		}
 		printf("no es nulo \n");
 	}
-	printf("\n%d",ll_len(pArrayList));
+	printf("\n La lista mide: %d",ll_len(pArrayList));
     return retorno;
 }
 
@@ -177,7 +177,7 @@ int controller_saveAsTextMinotauro(char* path , LinkedList* listaLibros)
 
 	return retorno;
 }
-
+/*
 int controller_aplicarDescuentos(LinkedList* listaLibros, LinkedList* listaEditorial)
 {
     int retorno;
@@ -350,7 +350,7 @@ int controller_saveAsText(char* path, LinkedList* librosList)
 				eLibro* pLibro;
 
 				int auxId;
-				char auxNombre[CHARACTERS_LEN];
+				char auxNombre[20];
 				int auxHorasTrabajadas;
 				int auxSueldo;
 
@@ -400,7 +400,7 @@ int controller_saveAsText(char* path, LinkedList* librosList)
 
 		return retorno;
 	}
-/*int libros_getAll(eLibro* this, int* id, char* titulo, char* autor,int* precio, int* idEditorial)
+int libros_getAll(eLibro* this, int* id, char* titulo, char* autor,int* precio, int* idEditorial)
 {
 	int retorno = -1;
 

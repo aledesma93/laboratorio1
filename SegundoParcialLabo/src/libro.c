@@ -2,7 +2,7 @@
  * libro.c
  *
  *  Created on: 20 nov. 2021
- *      Author: Ludo
+ *      Author: aledesma
  */
 
 #include <stdio.h>

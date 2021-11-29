@@ -2,7 +2,7 @@
  * validaciones.c
  *
  *  Created on: 13 oct. 2021
- *      Author: Ludo
+ *      Author: aledesma
  */
 
 #include <stdio.h>
