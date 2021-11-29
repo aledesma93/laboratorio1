@@ -2,7 +2,7 @@
  * validaciones.c
  *
  *  Created on: 13 oct. 2021
- *      Author: Ludo
+ *      Author: aledesma
  */
 
 #include <stdio.h>
@@ -25,7 +25,7 @@ int MenuPrincipal (void)
 }
 
 
-int myGets (char* cadena,char mensaje[] ,int longitud) //char nombre [200] myGets(nombre,sizeof(nombre)) sizeof le manda el tamaño
+int myGets (char* cadena,char mensaje[] ,int longitud) //char nombre [200] myGets(nombre,sizeof(nombre)) sizeof le manda el tamaÃ±o
 {
 	int retorno = -1;
 
