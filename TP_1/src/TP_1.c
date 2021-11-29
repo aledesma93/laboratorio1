@@ -12,11 +12,6 @@
 #include <stdlib.h>
 #include "utn.h"
 
-int factorial(int numero);
-float resultadoDividir;
-float resultadoSumar;
-float resultadoRestar;
-float resultadoMultiplicar;
 
 int main()
 
@@ -26,6 +21,12 @@ int main()
 	int opcion;
 	int A = 0;
 	int B = 0;
+	int factorial(int numero);
+	float resultadoDividir;
+	float resultadoSumar;
+	float resultadoRestar;
+	float resultadoMultiplicar;
+
 
 	do {
 		printf("\nIngrese una opcion:\n\n");
