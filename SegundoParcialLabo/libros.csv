@@ -1,0 +1,11 @@
+id,titulo,autor,precio,IdEditorial
+0,libroA,bbb,10,3
+1,libroB,aaa,20,1
+2,libroC,ccci,30,4
+3,libroD,ddd,40,5
+4,libroE,zzz,30,3
+5,libroF,fff,60,4
+6,libroG,ggg,70,1
+7,libroH,hhh,80,4
+8,libroI,iii,90,2
+9,libroJ,jjj,10,3
