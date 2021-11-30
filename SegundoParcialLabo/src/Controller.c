@@ -177,6 +177,50 @@ int controller_saveAsTextMinotauro(char* path , LinkedList* listaLibros)
 
 	return retorno;
 }
+int controller_saveAsTextDesc(char* path , LinkedList* listaLibros)
+{
+	FILE* pArchivo;
+	eLibro* pLibro;
+	LinkedList* listaDescuentos;
+	int retorno;
+	int len;
+	int idAux;
+	char tituloAux[50];
+	char autorAux[50];
+	int precioAux;
+	int idEditorial;
+	retorno = 0;
+
+	if(path != NULL && listaLibros != NULL &&  !ll_isEmpty(listaLibros))
+	{
+		listaDescuentos = ll_map(listaLibros, AplicarDescuentoLibro);
+
+		len = ll_len(listaDescuentos);
+		if(listaDescuentos != NULL)
+		{
+			pArchivo = fopen(path,"w");
+			fprintf(pArchivo,"Id Libro,Titulo,Autor,Precio,Id Editorial\n");
+			if(pArchivo != NULL)
+			{
+				for(int i = 0; i<len; i++)
+				{
+					pLibro = (eLibro*)ll_get(listaDescuentos,i);
+					if(!eLibro_getId(pLibro, &idAux) && !eLibro_getTitulo(pLibro, tituloAux)
+						&& !eLibro_getAutor(pLibro, autorAux) && !eLibro_getPrecio(pLibro, &precioAux)&&!eLibro_getIdEditorial(pLibro, &idEditorial))
+					{
+						fprintf(pArchivo, "%d, %s, %s, %d,%d\n", idAux, tituloAux, autorAux, precioAux,idEditorial);
+						retorno = 1;
+					}
+				}
+				fclose(pArchivo);
+			}
+
+		}
+	}
+
+	return retorno;
+}
+
 /*
 int controller_aplicarDescuentos(LinkedList* listaLibros, LinkedList* listaEditorial)
 {

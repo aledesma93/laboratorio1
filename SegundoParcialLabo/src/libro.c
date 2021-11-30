@@ -212,3 +212,38 @@ int libro_compararPorAutor(void* lista1, void* lista2)
 
     return retorno;
 }
+
+
+int AplicarDescuentoLibro(void* unLibro)
+{
+	eLibro* auxLibro;
+	int retorno;
+	int id;
+	int precio;
+	int descuento;
+	retorno = 0;
+
+	if(unLibro != NULL)
+	{
+		auxLibro = (eLibro*)unLibro;
+		eLibro_getIdEditorial(auxLibro, &id);
+		eLibro_getPrecio(auxLibro, &precio);
+
+		if(id == 1 && precio >= 300 ) //20%des editorial planeta
+		{
+			descuento = precio * 0.8;
+			eLibro_setPrecio(auxLibro,descuento);
+			retorno = 1;
+		}
+		else
+		{
+			if(id == 2 && precio <= 200)
+			{
+				descuento = precio * 0.9;
+				eLibro_setPrecio(auxLibro,descuento); //10%de ed siglo
+				retorno = 1;
+			}
+		}
+	}
+	return retorno;
+}

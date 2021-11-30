@@ -57,9 +57,18 @@ int main(void)
 				}
 				system("pause");
 				break;
+			case 6:
+				if(controller_saveAsTextDesc("mapeado.csv", listaLibros))
+				{
+					printf("se aplica el descuento\n""Archivo creado con exito\n");
 
-
-			case 8:
+				}
+				else
+				{
+					printf("No se pudo aplicar el descuento\n");
+				}
+				break;
+			case 7:
 				printf("Confirma salida s/n: \n");
 				fflush(stdin);
 				scanf("%c",&salir);

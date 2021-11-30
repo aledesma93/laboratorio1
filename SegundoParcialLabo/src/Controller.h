@@ -16,7 +16,7 @@ int filtrarEditorial(LinkedList* lista);
 int filtrarPlaneta(LinkedList* lista);
 int controller_saveAsTextMinotauro(char* path , LinkedList* listaLibros);
 int controller_obtenerEditorial(eLibro* miLibro, LinkedList* listaEditorial, char* descEdit);
-
+int controller_saveAsTextDesc(char* path , LinkedList* listaLibros);
 
 
 int controller_aplicarDescuentos(LinkedList* listaLibros, LinkedList* listaEditorial);

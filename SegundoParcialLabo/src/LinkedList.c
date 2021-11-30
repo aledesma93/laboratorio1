@@ -572,7 +572,7 @@ LinkedList* ll_filter(LinkedList *this, int (*pFunc)(void*)) {
 }
 
 
-int ll_map(LinkedList* this, LinkedList* this2, int (*pFunc)(LinkedList*, void*))
+/*int ll_map(LinkedList* this, LinkedList* this2, int (*pFunc)(LinkedList*, void*))
 {
    int retorno = 0;
    int retornoFunc;
@@ -613,7 +613,7 @@ int ll_map(LinkedList* this, LinkedList* this2, int (*pFunc)(LinkedList*, void*)
 
    return retorno;
 }
-/*
+
 int ll_map(LinkedList* this, float (*pFunc)(void*)){
 	int lenght;
 	void* pElement;
@@ -649,3 +649,33 @@ int ll_map(LinkedList* this, float (*pFunc)(void*)){
 	//delete_linkedList(newLinkedList);
 return retorno;
 }*/
+
+//te devuelve una nueva lista con la misma cantidad de elementos con elementos que pueden ser modificados segun el criterio de la funcion puntero
+//realiza copia de la lista que quizas sea modificada (si cumple con el criterio de pFunc)
+LinkedList* ll_map(LinkedList* this, int (*pFunc)(void*))
+{
+	int len;
+	void *pElement;
+	LinkedList *newLinkedList = NULL;
+
+	if (this != NULL && pFunc != NULL)
+	{
+		newLinkedList = ll_clone(this); //la diferencia con filter es que clona la lista original
+		if (newLinkedList != NULL)
+		{
+			len = ll_len(newLinkedList);
+
+			for (int i = 0; i < len; i++)
+			{
+				pElement = ll_get(newLinkedList, i);
+				pFunc(pElement);
+				if(pElement != NULL)
+				{
+				   ll_add(newLinkedList, pElement);
+				}
+			}
+		}
+	}
+	return newLinkedList;
+}
+

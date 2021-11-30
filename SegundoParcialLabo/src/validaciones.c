@@ -18,7 +18,7 @@ int MenuPrincipal (void)
 	int opciones;
 
 	printf("\n 1)Leer archivo con los datos de libros y guardarlos.\n 2)Leer archivo con los datos de editoriales y guardarlos.\n 3)Lista ordenada por Autor de manera ascendente.\n 4)Imprimir todos los datos de los libros mas el nombre de la editorial.\n"
-	" 5)Listado de los libros de la editorial MINOTAURO.\n6)Salir.\n");
+	" 5)Listado de los libros de la editorial MINOTAURO.\n 6)descuentos.\n7)Salir.\n");
 
 	scanf("%d",&opciones);
 	return opciones;

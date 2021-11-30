@@ -40,5 +40,6 @@ int eLibro_getIdEditorial(eLibro* this,int* idEditorial);
 void MostrarUnLibro(eLibro* UnLibro, LinkedList* thisEditorial);
 int libro_compararPorAutor(void* lista1, void* lista2);
 void eLibro_delete();
+int AplicarDescuentoLibro(void* unLibro);
 
 #endif /* LIBRO_H_ */
